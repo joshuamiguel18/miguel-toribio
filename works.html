@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="/project.css">
+</head>
+<body>
+    <h2>&lt;projects&gt;</h2>
+    <h2>&lt;/projects&gt;</h2>
+    <div class="menu-btn">
+        <div class="menu-btn__burger"></div>
+    </div>
+
+    <div class="menu-bar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="works.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <img src="/images/Screenshot 2023-03-24 203553.png" alt="">
+            <div class="details">
+                <h1>
+                    Landing Page
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ratione repellendus possimus optio voluptatem nobis numquam tempora consequuntur consequatur quo?
+                </p>
+                <ul>
+                    <li>HTML</li>
+                    <li>JAVASCRIPT</li>
+                    <li>CSS</li>
+
+                </ul>
+                <div class="sub-details">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <img src="/images/anime-app.png" alt="">
+            <div class="details">
+                <h1>
+                    Anime Searching Site
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ratione repellendus possimus optio voluptatem nobis numquam tempora consequuntur consequatur quo?
+                </p>
+                <ul>
+                    <li>HTML</li>
+                    <li>JAVASCRIPT</li>
+                    <li>CSS</li>
+
+                </ul>
+                <div class="sub-details">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const menu = document.querySelector('.menu-bar');
+        const body = document.querySelector('body');
+        let menuOpen = false;
+        menuBtn.addEventListener('click', () => {
+        if(!menuOpen) {
+            menuBtn.classList.add('open');
+            menuOpen = true;
+            menu.style.transform = 'translateY(0%)'
+            body.style.overflowY = 'hidden'
+        } else {
+            menuBtn.classList.remove('open');
+            menuOpen = false;
+            menu.style.transform = 'translateY(-100%)'
+            body.style.overflowY = 'auto'
+        }
+        });
+
+
+
+
+    </script>
+</body>
+</html>

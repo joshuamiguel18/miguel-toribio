@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <h2>&lt;about&gt;</h2>
+    <h2>&lt;/about&gt;</h2>
+    <div class="menu-btn">
+        <div class="menu-btn__burger"></div>
+    </div>
+
+    <div class="menu-bar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="works.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="socials"> 
+        <img src="/images/github.png" alt="github-logo"> 
+        <img src="/images/linkedin.png" alt="linkedin-logo"> 
+        <img src="/images/twitter.png" alt="twitter-logo">     
+    </div> 
+    
+    <div class="container">
+        <h4>
+            A FEW WORDS ABOUT ME
+        </h4>
+        <p>
+            As a junior developer, I am passionate about creating clean, efficient, and user-friendly websites. I have a strong foundation in HTML, CSS, and JavaScript, and I am constantly expanding my skill set to include new technologies and programming languages. I am dedicated to producing high-quality work that meets the needs and expectations of my clients and users. With a keen eye for detail and a commitment to continuous learning, I am confident in my ability to contribute to any development team and bring value to any project.
+        </p>
+        
+        <div class="tools">
+            <h1>Tools</h1>
+            <div class="tool-img">
+                <img src="/images/html.png" alt="">
+                <img src="/images/css-3 (1).png" alt="">
+                <img src="/images/js (1).png" alt="">
+                <img src="/images/java (1).png" alt="">
+                <img src="/images/physics.png" alt="">
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const menu = document.querySelector('.menu-bar');
+        let menuOpen = false;
+        menuBtn.addEventListener('click', () => {
+        if(!menuOpen) {
+            menuBtn.classList.add('open');
+            menuOpen = true;
+            menu.style.transform = 'translateY(0%)'
+        } else {
+            menuBtn.classList.remove('open');
+            menuOpen = false;
+            menu.style.transform = 'translateY(100%)'
+        }
+        });
+
+
+
+
+    </script>
+</body>
+</html>
