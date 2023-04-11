@@ -8,8 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="menu-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="works.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
     
     <nav>
+        <div class="menu-btn">
+            <div class="menu-btn__burger"></div>
+        </div>
+        
         <h2>MiguelDev</h2>
         <div class="sub-container">
             <ul>
@@ -46,5 +58,25 @@
         
     </section>
     
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const menu = document.querySelector('.menu-bar');
+        let menuOpen = false;
+        menuBtn.addEventListener('click', () => {
+        if(!menuOpen) {
+            menuBtn.classList.add('open');
+            menuOpen = true;
+            menu.style.transform = 'translateY(0%)'
+        } else {
+            menuBtn.classList.remove('open');
+            menuOpen = false;
+            menu.style.transform = 'translateY(100%)'
+        }
+        });
+
+
+
+
+    </script>
 </body>
 </html>

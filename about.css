@@ -176,8 +176,9 @@ h2:nth-child(2) {
 
 
 .container {
-    width: min(85%, 1500px);
+    width: min(100%, 1500px);
     height: min(100%, 800px);
+ 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,7 +215,10 @@ h2:nth-child(2) {
     top: 50%;
     left: 0;
     transform: translateY(-100%);
-}
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 
 .socials img {
     border-radius: 10px;
@@ -251,7 +255,92 @@ h2:nth-child(2) {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;    
+    transition: all .5s ease;
 }
 
 
 
+@media only screen and (max-width: 950px) {
+  .tool-img {
+    width: 100%;
+
+}
+
+.container p {
+  font-size: .8rem;
+  text-align: justify;
+}
+
+
+
+.socials img {
+
+    width: 40px;
+    height: 40px;
+}
+
+
+h2 {
+
+  font-size: 1.5rem;
+
+
+}
+.container h4 {
+  font-size: .8rem;
+
+}
+.container {
+  padding-left: 6%;
+}
+}
+
+@media only screen and (max-width: 420px) {
+
+  h2 {
+
+    font-size: 1rem;
+  }
+  h2:nth-child(1) {
+    top: 3%;
+    left: 3%;
+}
+
+h2:nth-child(2) {
+    left: 3%;
+    bottom: 3%;
+}
+
+.menu-btn {
+
+  top: 1%;
+  right: 3%;
+  width: 50px;
+  height: 50px;
+}
+.tools img{
+  width: 30px;
+  height: 30px;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+
+  width: 40px;
+  height: 3px;
+
+
+}
+.menu-btn__burger {
+  width: 40px;
+  height: 3px;
+
+}
+.menu-btn__burger::before {
+  transform: translateY(-12px);
+}
+.menu-btn__burger::after {
+  transform: translateY(12px);
+}
+
+}

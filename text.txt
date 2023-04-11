@@ -1,0 +1,103 @@
+
+.hero h1::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #03001C;
+    border-left: 2px solid #FC6D6D;
+  }
+  .hero h1:nth-child(1):after{
+
+    animation: typing 3s steps(13);
+
+  }
+  .hero h1:nth-child(2):after{
+   
+    animation: typing 4s 3s steps(20);
+
+  }
+  
+  @keyframes typing {
+    40%, 60%{
+      left: calc(100% + 30px);
+    }
+    100% {
+        left: calc(100% + 30px);
+    }
+  }
+
+
+
+
+
+
+
+
+  
+.card::before,
+.card::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    top: -15px;
+    left: -15px;
+    border-radius: 8px;
+    background: linear-gradient(45deg,
+        #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000,
+        #ff0055, #ff0000, #ffff00, #00ff00, #0099ff, #001aff, #a200ff
+    );
+    background-size: 300%;
+    animation: border 12s linear infinite;
+}
+
+.card::after {
+    filter: blur(50px);
+}
+
+@keyframes border {
+    0%, 100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 300%;
+    }
+}
+
+.card::before,
+.card::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    top: -15px;
+    left: -15px;
+    border-radius: 8px;
+    background: linear-gradient(45deg,
+        #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000,
+        #ff0055, #ff0000, #ffff00, #00ff00, #0099ff, #001aff, #a200ff
+    );
+    background-size: 300%;
+    animation: border 12s linear infinite;
+}
+
+.card::after {
+    filter: blur(50px);
+}
+
+@keyframes border {
+    0%, 100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 300%;
+    }
+}
+

@@ -16,7 +16,7 @@
 
     <div class="menu-bar">
         <ul>
-            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="works.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -59,6 +59,31 @@
                     <li>HTML</li>
                     <li>JAVASCRIPT</li>
                     <li>CSS</li>
+                    <li>API</li>
+
+                </ul>
+                <div class="sub-details">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <img src="/images/Screenshot 2023-04-04 184651.png" alt="">
+            <div class="details">
+                <h1>
+                    Landing Page 2
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ratione repellendus possimus optio voluptatem nobis numquam tempora consequuntur consequatur quo?
+                </p>
+                <ul>
+                    <li>HTML</li>
+                    <li>JAVASCRIPT</li>
+                    <li>CSS</li>
+
 
                 </ul>
                 <div class="sub-details">
@@ -71,6 +96,9 @@
         const menuBtn = document.querySelector('.menu-btn');
         const menu = document.querySelector('.menu-bar');
         const body = document.querySelector('body');
+        var after = document.querySelector('.menu-btn');
+        const after1 = window.getComputedStyle(after,':after')
+    
         let menuOpen = false;
         menuBtn.addEventListener('click', () => {
         if(!menuOpen) {
@@ -78,6 +106,7 @@
             menuOpen = true;
             menu.style.transform = 'translateY(0%)'
             body.style.overflowY = 'hidden'
+            after1.style.backgroundColor = 'black'
         } else {
             menuBtn.classList.remove('open');
             menuOpen = false;
